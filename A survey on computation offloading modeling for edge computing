@@ -1,4 +1,7 @@
-ref:
+ref:Hai Lin, Sherali Zeadally, et al. A survey on computation offloading modeling for edge computing. 
+      Journal of Network and Computer Applications 169(2020), 102781.
+
+file name: 1-s2.0-S1084804520302551-main
 
 主题：边缘计算中的计算分流问题
 结构：
@@ -35,3 +38,52 @@ or machine learning对每种模型进行分析
     The two-tier architecture (ED-EC) enables EC alone to handle computation
     tasks while in the three-tier architecture (ED-EC-Cloud) EC works as a
     complement to cloud computing. 
+
+4、二级构架：ED-EC
+  最重要的二级构架：ETSI MEC， defines, from top to bottom, a mobile edge system level, a mobile edge host level and a network level. 
+                              The mobile edge host level is the fundamental part of the MEC framework which hosts and manages all edge applications. 
+                              The mobile edge system level provides an abstraction of the underlying MEC system for end users and 
+                              third parties whereas the underlying networks level offers connectivity to a variety of accesses including 3GPP mobile networks, 
+                              local access network and external network such as the Internet
+  其他二级构架举例：Mobile Ad hoc Cloud (MAC)，proposes an ad-hoc EC architecture which consists of five components: an application manager, a resource manager, 
+                  a context manager, a communication manager, and a task offloading manager. Mobile EDs act as both users and EC servers. When a mobile ED wishes 
+                  to execute a computation-intensive task while its CPU resources are being heavily used, it offloads the task to another mobile ED (or others). 
+5、三级构架：ED-EC-Cloud
+比如：The OpenFog consortium defines a hierarchical architecture 
+
+6、基于一些特殊场景/应用的构架 In the literature, there are also some edge computing architectures/ frameworks designed for specific applications.
+
+7、构架的总结：A two-tier architecture handles all tasks at the edge, so it works well for time-sensitive applications. In contrast, 
+              the design of the two-tier architecture focuses more on edge server management, performance optimization 
+              (e.g. load balancing, execution latency), and application management. A three-tier architecture is suitable 
+              for applications which have both time-sensitive tasks and computation-intensive tasks. 
+              
+8、计算分流的分类：based on offloading goals、classify the computation offloading into static offloading and dynamic offloading
+classify computation offloading from two other perspectives (Fig. 5): one is from offloading flow. The second one is based on offloading scenario
+
+Computation offloading related techniques：
+9、Offloading mode：: depending on whether a task is partitionable
+  Two computation offloading modes have been defined in EC: binary（无法拆分） and partial（可拆分） offloading
+    partial  offloading：
+        parallel：the offloading strategy only needs to decide where to place the components
+        sequential：should define the components’ placement as well as their scheduling.
+
+10、Channel model: depending on multiple access mode
+  Interference model：CDMA
+  interference-free model：OFDMA
+
+11、Computing model: depending on the definition of the computation task and the queue model
+    Energy consumption optimization and latency minimization are two important objectives of computation offloading
+     mainly caused by task execution and transmission
+     
+12、Energy harvesting（能量收集） model: depending on the knowledge about energy arrivals
+  classified as deterministic（确定的） or stochastic（随机的）
+  
+13、计算分流模型中的重要参数/决策：
+      Offloading decision：分流到本地/云端/边缘?
+      Server selection
+      Wireless resource allocation:使用哪部分无线资源进行数据传输
+      Transmission power setting:能量限制
+      Computation resource allocation:计算资源的分配
+      
+14、计算分流的目标：最低延迟、最小能耗、任务分发时间最短、计算资源使用最大化、经济开销最小
