@@ -1,0 +1,37 @@
+ref:
+
+主题：边缘计算中的计算分流问题
+结构：
+1、对前人提出的边缘计算结构进行分类
+2、对 channel model, computation and communication model, and energy harvesting model等主流的计算分流模型，
+并通过 (non-)convex optimization, Markov decision process, game theory, Lyapunov optimization,
+or machine learning对每种模型进行分析
+
+核心内容：
+1、Computation offloading, which offloads computation tasks to EC,
+  consists of a transmission procedure, a remote execution procedure, and
+  a result send-back procedure
+
+2、offloading scheme：
+    a.Task partition: If a task is partitionable, we need to optimally
+      partition the task before offloading (Fig. 1b). Otherwise, the whole
+      task should be offloaded to an EC server .
+    b.Offloading decision (task placement): to decide which EC server(s)
+      will execute the whole task or the partitioned task. It is worth noting
+      that the task can also be executed locally.
+    c.Resource allocation: to determine the amount of resources needed.
+      These resources include computing resources, communication resources, and energy which should be allocated for the tasks or
+      components. 
+      导出问题的核心在于以上三个步骤的最优化
+      
+3、主流Edge computing architectures and frameworks ：
+    a.European Telecommunications Standards Institute
+      (ETSI) MEC, 
+    b.OpenFog
+    c.mobile Edge computing for the Internet of Things
+      (EdgeIoT)
+    d.FLexible Edge Computing (FLEC)
+    分类：two-tier(2级构架)/three-tier(3级构架)
+    The two-tier architecture (ED-EC) enables EC alone to handle computation
+    tasks while in the three-tier architecture (ED-EC-Cloud) EC works as a
+    complement to cloud computing. 
