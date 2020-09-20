@@ -148,7 +148,16 @@ title: Edge computing: A survey
 
 / * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
+ref: Xiaolong Xu, Yuan Xue, , Lianyong Qi, et al. An edge computing-enabled computation offloading method with
+privacy preservation for internet of connected vehicles. Future Generation Computer Systems 2019, 96:89-100.
 
+title: An edge computing-enabled computation offloading method with
+      privacy preservation for internet of connected vehicles.
+
+主要内容：
+1、边缘计算在车联网安全中的应用。将本应放在云端处理的实时数据下放到edge computing device（ECD）上，以减小时延。
+2、通过NSGA-II (non-dominated sorting genetic algorithm II)算法实现了多目标的优化，以减小计算任务的耗时和ECDs的能耗。
+3、结构：基本公式推导、建立相关的数学模型、模拟实验验证
 
 
 
