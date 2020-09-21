@@ -2,32 +2,39 @@ file name: 08812214
 ref: M. Caprolu, R. Di Pietro, F. Lombardi and S. Raponi, "Edge Computing Perspectives: Architectures, Technologies, and Open Security Issues," 
 2019 IEEE International Conference on Edge Computing (EDGE), Milan, Italy, 2019, pp. 116-123, doi: 10.1109/EDGE.2019.00035.
 
-/ * *  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
+/ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
 file name: 08812185
 M. Alnemari and N. Bagherzadeh, "Efficient Deep Neural Networks for Edge Computing," 2019 IEEE International Conference on Edge Computing (EDGE), 
 Milan, Italy, 2019, pp. 1-7, doi: 10.1109/EDGE.2019.00014.
 
-/ * *  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
+/ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
 file name: 08812191
 ref: V. De Nitto Personè and V. Grassi, "Architectural Issues for Self-Adaptive Service Migration Management in Mobile Edge Computing Scenarios," 
 2019 IEEE International Conference on Edge Computing (EDGE), Milan, Italy, 2019, pp. 27-29, doi: 10.1109/EDGE.2019.00020.
 
-/ * *  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
+/ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
 file name: 08029283
 ref: X. Wei et al., "MVR: An Architecture for Computation Offloading in Mobile Edge Computing," 2017 IEEE International Conference on Edge Computing (EDGE), 
 Honolulu, HI, 2017, pp. 232-235, doi: 10.1109/IEEE.EDGE.2017.42.
 
-/ * *  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
+/ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
 file name: 08473378
 ref: Y. Li and S. Wang, "An Energy-Aware Edge Server Placement Algorithm in Mobile Edge Computing," 2018 IEEE International Conference on Edge Computing (EDGE), 
 San Francisco, CA, 2018, pp. 66-73, doi: 10.1109/EDGE.2018.00016.
 
-/ * *  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
+/ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
 file name: 07307234
 ref: X. Chen, L. Jiao, W. Li and X. Fu, "Efficient Multi-User Computation Offloading for Mobile-Edge Cloud Computing," 
 in IEEE/ACM Transactions on Networking, vol. 24, no. 5, pp. 2795-2808, October 2016, doi: 10.1109/TNET.2015.2487344.
+
+/ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
+
+file name: 08016213
+ref: K. Dolui and S. K. Datta, "Comparison of edge computing implementations: Fog computing, cloudlet and mobile edge computing," 
+2017 Global Internet of Things Summit (GIoTS), Geneva, 2017, pp. 1-6, doi: 10.1109/GIOTS.2017.8016213.
+
