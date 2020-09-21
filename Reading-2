@@ -2,11 +2,37 @@ file name: 08812214
 ref: M. Caprolu, R. Di Pietro, F. Lombardi and S. Raponi, "Edge Computing Perspectives: Architectures, Technologies, and Open Security Issues," 
 2019 IEEE International Conference on Edge Computing (EDGE), Milan, Italy, 2019, pp. 116-123, doi: 10.1109/EDGE.2019.00035.
 
+主要内容：EC中的结构、技术等安全问题
+主要讨论了EC部署的4种平台，以及每种平台上的安全性问题
+
+1、containerization:全虚拟化的轻量级替代方案
+    As opposed to virtualization, containers offer near bare metal performance, being a standard unit
+of software that contains the running code together with the related dependencies. This logical packaging
+mechanism decouples applications from the infrastructure, thus allowing the consistent and efficient deployment of
+container-based applications regardless of the environment
+    代表：doker
+    安全问题：生产系统配置不安全; 图片分发的漏洞；Linux内核的漏洞；与Docker直接相关的漏洞
+
+2、RTOS，实时操作系统
+    安全问题：对DoSes等攻击很脆弱
+
+3、Unix内核:允许内核代码和应用程序代码在同一层级运行
+      这一特点提升了性能，但也将系统内核暴露在外
+
+4、网络边缘的虚拟化：provide more scalable, reliable, and performing services
+
 / * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
 file name: 08812185
 M. Alnemari and N. Bagherzadeh, "Efficient Deep Neural Networks for Edge Computing," 2019 IEEE International Conference on Edge Computing (EDGE), 
 Milan, Italy, 2019, pp. 1-7, doi: 10.1109/EDGE.2019.00014.
+
+主要内容：边缘计算中的高效深度神经网络
+
+通过滤波器剪枝(filter pruning)和张量分解(Tensor Train Decomposition)来减小深度神经网络对计算、存储资源的要求
+以便于将其部署在边缘设备上
+
+成果：在不同情况在，减少了85%-98.7%的能耗
 
 / * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
@@ -14,11 +40,45 @@ file name: 08812191
 ref: V. De Nitto Personè and V. Grassi, "Architectural Issues for Self-Adaptive Service Migration Management in Mobile Edge Computing Scenarios," 
 2019 IEEE International Conference on Edge Computing (EDGE), Milan, Italy, 2019, pp. 27-29, doi: 10.1109/EDGE.2019.00020.
 
+主要内容：MEC场景下，自适应服务迁移管理的结构问题，即当用户移动时，原本节点上的服务如何迁移到新的节点上
+研究方法：提出一种分析模型，并对此问题进行分析
+
+针对该方面的研究较少
+
+建立的模型：MAPE-K
+M:Monitor，收集终端设备到节点的距离等信息
+A:Analyze
+P:Plan
+AP决定一个服务是否需要被迁移
+E:Execute,执行迁移过程
+
+两种MAPE模式：1、部分结构分布式，中心化控制；适合主从模式(master-slave)
+             2、全分布式结构，适合信息共享模式
+
+
 / * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
 file name: 08029283
 ref: X. Wei et al., "MVR: An Architecture for Computation Offloading in Mobile Edge Computing," 2017 IEEE International Conference on Edge Computing (EDGE), 
 Honolulu, HI, 2017, pp. 232-235, doi: 10.1109/IEEE.EDGE.2017.42.
+
+主要内容：describe the offloading system model and present an innovative
+      architecture, called “MVR”, contributing to computation offloading in mobile edge computing
+
+核心：why to offload, what to offload, when to offload and how to offload
+结构：解释分流系统模型、提出MVR
+
+MVR系统
+1、应用的每个子任务是时序执行的
+2、应用被分为多个执行过程(procedure),每个procedure根据是否在本地处理而编号(0\1)
+3、不在本地处理的procedure被上传到边缘节点进行处理
+4、结构：
+  代理监视器，负责发现服务
+  决策引擎：包括分流的决策以及分流带来的消耗、好处的计算
+  任务分发器，决定procedure的0、1
+  执行器：执行具体的处理任务
+  注册管理器，负责管理注册的设备、请求服务的设备
+  预测器：预测未来的服务流量需求
 
 / * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
@@ -26,15 +86,60 @@ file name: 08473378
 ref: Y. Li and S. Wang, "An Energy-Aware Edge Server Placement Algorithm in Mobile Edge Computing," 2018 IEEE International Conference on Edge Computing (EDGE), 
 San Francisco, CA, 2018, pp. 66-73, doi: 10.1109/EDGE.2018.00016.
 
-/ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
+主要内容：MEC中能量感知的边缘服务部署算法。主要研究了基于能量感知的服务部署问题，旨在提出有效节能的部署策略
+成果：通过对上海telecom数据的测试，算法减少了10%的能耗，提升了15%的资源利用率
 
-file name: 07307234
-ref: X. Chen, L. Jiao, W. Li and X. Fu, "Efficient Multi-User Computation Offloading for Mobile-Edge Cloud Computing," 
-in IEEE/ACM Transactions on Networking, vol. 24, no. 5, pp. 2795-2808, October 2016, doi: 10.1109/TNET.2015.2487344.
+MEC中，绝大多数研究集中在计算分流上(offloading) 该研究建立在服务已经部署好的基础上
+MEC中对服务部署的研究还很少
+cloudlet中的服务部署问题已经得到了广泛的研究，但其中的算法不能直接用于MEC
+原因在于：Cloudlets provide computing resources close to users but they are not necessarily placed
+          at base stations. On the contrary, placing servers at base stations is a basic assumption in mobile edge computing
+          
+MEC服务的模型：3层
+数据中心层
+边缘服务层
+用户设备层
+
+能量感知的服务部署算法：基于PSO(Particle Swarm Optimization)进行改进
+基本的PSO只能用于连续的优化问题，而边缘服务的部署是非连续的
 
 / * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
 file name: 08016213
 ref: K. Dolui and S. K. Datta, "Comparison of edge computing implementations: Fog computing, cloudlet and mobile edge computing," 
 2017 Global Internet of Things Summit (GIoTS), Geneva, 2017, pp. 1-6, doi: 10.1109/GIOTS.2017.8016213.
+
+主要内容：EC的三种实例(雾计算、MEC、cloudlet),以及给出一个选择EC实现方式的决策树
+
+雾计算：1、云计算的去中心化，通过在终端设备和云之间的任意一处部署雾计算节点实现。
+      2、具有很强的异构型，能部署在路由器、交换机、接入点、物联网网关等设备上
+      3、supporting devices at different protocol layers as well as support for non-IP based
+        access technologies to communicate between the FCN and the end-device
+      4、具有一个控制平面(Service Orchestration Layer)
+      
+MEC: MEC节点通常和无线网络控制器和超大基站部署在一起。
+    一个sever上通常跑几个MEC host实例。
+    具有一个控制平面(Mobile Edge Orchestration Layer)
+      
+小云计算：cloudlet可以被看作一簇被信任的联网计算机，其资源可被邻近的移动设备获取
+        模型分为三层：
+          a.component layer: 提供与上层协议的接口
+          b.node layer: 节点的操作系统上运行一个或多个执行环境，有节点代理进行管理
+          c.Cloudlet layer: 多个节点的集合，节点由小云代理(Cloudlet Agent)管理
+
+选择模型时关注的参数
+1、距离：终端设备和边缘层直接的节点跳数或者是物理距离
+2、接入媒体：WIFI、蓝牙、移动无线网络等。不同的接入方式有不同的协议、带宽等
+    雾计算支持蓝牙和Zigbee，使得设备可以运行HTTP协议栈以及减小计算和存储负担
+    小云计算仅支持WIFI
+3、上下文感知:MEC>雾计算>小云计算
+4、能耗
+5、计算时长：MEC和Cloudlet优于雾计算
+
+
+
+
+
+
+
 
