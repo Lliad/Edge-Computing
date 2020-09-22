@@ -2,6 +2,13 @@ file name: 7488250
 ref: W. Shi, J. Cao, Q. Zhang, Y. Li and L. Xu, "Edge Computing: Vision and Challenges," 
      in IEEE Internet of Things Journal, vol. 3, no. 5, pp. 637-646, Oct. 2016, doi: 10.1109/JIOT.2016.2579198.
      
+ 主要内容：简介EC 给出领域内潜在的挑战和机会
+ 结构：对EC的需求、EC的定义->EC案列->挑战
+ 
+ 需要EC的原因：
+ 1、Push From Cloud Services
+ 2、Pull From IoT
+ 3、) Change From Data Consumer to Producer
 / * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * /
 
 file name: 7498684
